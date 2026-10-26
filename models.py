@@ -69,7 +69,7 @@ class Transaction:
 
     def calculateTotal(self):
         # Sums the price of each selected item and stores the result.
-        self.totalCost = sum(item.getPrice() for item in self.selectedItems)
+        self.totalCost = round(sum(item.getPrice() for item in self.selectedItems), 2)
         return self.totalCost
 
     def getTotalCost(self):
